@@ -20,7 +20,7 @@ public class MemberService {
     // 회원 가입
     @Transactional // 따로 설정한 곳은 @Transactional 기능이 먹힘
     public Long join(Member member) {
-        validateDuplicateMember(member); // 중복 회원 검증
+        validateDuplicateMember(member); // 중복 회원 검증!
         memberRepository.save(member);
         return member.getId();
     }
